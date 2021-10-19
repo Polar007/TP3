@@ -2,6 +2,8 @@ package com.example.tp3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -49,8 +51,13 @@ public class MainActivity extends AppCompatActivity {
             }catch (Exception e){
                 //it's not a button!
             }
-            
+
 
         }
     }
-}
+
+    public void APropos(View v){
+        Intent myintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://en.wikipedia.org/wiki/Monty_Hall"));
+        startActivity(myintent);
+    }
+}//
