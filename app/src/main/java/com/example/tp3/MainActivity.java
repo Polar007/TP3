@@ -44,7 +44,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         for (View view:v.getTouchables()){
-            Button button = (Button)view;
+            try {
+                Button button = (Button)view;
+            }catch (Exception e){
+                //it's not a button!
+            }
+            
+
         }
     }
 }
