@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">TP3</string>
+    <string name="ChangeChoice">Do you wish to change your choice for the door %1$s?</string>
+    <string name="Door1">1</string>
+    <string name="Door2">2</string>
+    <string name="Door3">3</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+    <string name="MontyHall">The Monty Hall Game</string>
+    <string name="Apropos">A propos</string>
+    <string name="ChooseDoor">Choose one door!</string>
 </resources>

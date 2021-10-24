@@ -11,33 +11,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onButtonPress"
-        android:text="1"
+        android:text="@string/Door1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="137dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.103" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onButtonPress"
-        android:text="2"
+        android:text="@string/Door2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button"
-        tools:layout_editor_absoluteY="137dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.102" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onButtonPress"
-        android:text="3"
+        android:text="@string/Door3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button2"
-        tools:layout_editor_absoluteY="137dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.102" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
@@ -45,7 +51,7 @@
         android:layout_height="39dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="The Monty Hall Game"
+        android:text="@string/MontyHall"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +64,7 @@
         android:ems="10"
         android:gravity="center|fill"
         android:inputType="textPersonName"
-        android:text="Choose one door!"
+        android:text="@string/ChooseDoor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,8 +75,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:onClick="APropos"
-        android:text="A Propos"
+        android:onClick="aPropos"
+        android:text="@string/Apropos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />

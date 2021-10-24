@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -19,11 +18,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        chooseTrueDoor();
         setContentView(R.layout.activity_main);
     }
 
-    protected void createRandomDoors(){
+    protected void chooseTrueDoor(){
         int trueDoorNumber = (int) (Math.random() * 2);
+        doors[trueDoorNumber] = true;
     }
 
     public void onButtonPress(View v) {
@@ -47,14 +48,18 @@ public class MainActivity extends AppCompatActivity {
         }
         switchActivities(toRemove);
     }
+
     private void switchActivities(int toRemove) {
             Intent switchActivityIntent = new Intent(this, MainActivity2.class);
             switchActivityIntent.putExtra("toRemove", toRemove);
+            for(int i = 0; i < 3; i++) {
+                if(doors[i]) switchActivityIntent.putExtra("trueDoor", i);
+            }
             startActivity(switchActivityIntent);
         }
 
-    public void APropos(View v){
-        Intent myintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://en.wikipedia.org/wiki/Monty_Hall"));
-        startActivity(myintent);
+    public void aPropos(View v){
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://en.wikipedia.org/wiki/Monty_Hall"));
+        startActivity(myIntent);
     }
 }
